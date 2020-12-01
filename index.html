@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Профессиональное бюро охраны</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="shortcut icon" href="img/logos/logo.png" type="image/png" />
     <meta
@@ -384,8 +388,27 @@
               прогрессом, используя новинки в охранных технологиях в зависимости
               от пожеланий клиента
             </p>
+            <div class="trust__imgs">
+              <div class="trust__img_lc">
+                <div class="btn">Посмотреть лицензию на охранные услуги</div>
+
+                <a data-fancybox="exp__galerry" href="img/lic/1.jpg"> </a>
+              </div>
+              <a data-fancybox="exp__galerry" class="aa" href="img/lic/2.jpg">
+              </a>
+            </div>
           </div>
         </div>
+        <!-- <div class="trust__imgs">
+          <div class="trust__img_lc">
+            <img src="img/lic/1.jpg" alt="" />
+            <a data-fancybox="exp__galerry" href="img/lic/1.jpg"> </a>
+          </div>
+          <div class="trust__img_lc">
+            <img src="img/lic/2.jpg" alt="" />
+            <a data-fancybox="exp__galerry" href="img/lic/2.jpg"> </a>
+          </div>
+        </div> -->
       </div>
     </section>
     <section class="trust">
@@ -415,14 +438,6 @@
           <div class="trust__item"><img src="img/trust/7.png" alt="" /></div>
           <div class="trust__item trust__item_ls">
             <img src="img/trust/8.png" alt="" />
-          </div>
-        </div>
-        <div class="trust__imgs">
-          <div class="trust__img_lc">
-            <img src="img/lic/1.jpg" alt="" />
-          </div>
-          <div class="trust__img_lc">
-            <img src="img/lic/2.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -665,6 +680,7 @@
               <div class="head__form-inputs quiz_i quiz_i_2">
                 <h6 class="qz__title">Введите площадь м2 *</h6>
                 <input
+                  class="inputPres"
                   type="number"
                   name="Примерная площадь объекта"
                   placeholder="Примерная площадь объекта"
@@ -673,7 +689,7 @@
               </div>
               <div class="head__form-inputs quiz_i quiz_i_3">
                 <h6 class="qz__title">Выберите услугу из списка</h6>
-                <select name="service" class="sel" type="text">
+                <select name="service" class="sel1 sel" type="text">
                   <option>Выберите услугу</option>
                   <option>МОНИТОРИНГ</option>
                   <option>ОПЕРАТИВНОЕ РЕАГИРОВАНИЕ</option>
@@ -684,6 +700,7 @@
               <div class="head__form-inputs quiz_i quiz_i_4">
                 <h6 class="qz__title">Укажите ваше имя</h6>
                 <input
+                  class="inputPres"
                   type="text"
                   name="Name"
                   placeholder="Ваше имя"
@@ -694,17 +711,18 @@
               <div class="head__form-inputs quiz_i quiz_i_5">
                 <h6 class="qz__title">Введите Номер телефонa *</h6>
                 <input
+                  class="inputPres"
                   type="tel"
                   name="Phone"
-                  placeholder="Номер телефонa"
+                  placeholder="89031184356"
                   required=""
                   pattern="\+79[0-9]{9}|8[0-9]{10}"
                 />
               </div>
             </div>
             <div class="q_btns">
-              <div class="q_prev btn">назад</div>
-              <div class="q_next btn">далее</div>
+              <div disabled class="q_prev btn">назад</div>
+              <div disabled class="q_next btn">далее</div>
             </div>
             <div class="q_err"></div>
             <div class="q__countttt"><span></span> / 5</div>
@@ -810,7 +828,9 @@
         </form>
       </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
   </body>

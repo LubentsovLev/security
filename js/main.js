@@ -46,7 +46,7 @@ openPop(pop_order_2, popup_3);
 openPop(pop_order_3, popup_4);
 openPop(footer__call, popup_1);
 openPop(present__main_btn, popup_5);
-openPop(which__bottom, popup_6);
+// openPop(which__bottom, popup_6);
 
 closePop(x_1, popup_1);
 closePop(x_2, popup_2);
@@ -277,4 +277,44 @@ document.addEventListener("click", function () {
     main_qqq();
     ffff = true;
   }
+  let inputPres = document.querySelector(".inputPres");
+  let selectPres = document.querySelector(".sel");
+  let option = document.querySelectorAll("option");
+  // debugger;
+  document.addEventListener("click", (e) => {
+    if (
+      e.target.classList[0] === "sel" &&
+      e.target.value !== "Выберите объект"
+    ) {
+      q_prev.removeAttribute("disabled", "");
+      q_next.removeAttribute("disabled", "");
+    } else if (
+      e.target.classList[0] === "sel1" &&
+      e.target.value !== "Выберите услугу"
+    ) {
+      q_prev.removeAttribute("disabled", "");
+      q_next.removeAttribute("disabled", "");
+    } else if (e.target.classList[0] === "sel1") {
+      q_next.setAttribute("disabled", "");
+    } else if (e.target.classList[0] === "sel") {
+      q_next.setAttribute("disabled", "");
+    }
+  });
+  document.addEventListener("input", (e) => {
+    if (e.target.value !== "") {
+      // q_prev.setAttribute("disabled");
+      q_next.removeAttribute("disabled", "");
+    } else {
+      q_next.setAttribute("disabled", "");
+    }
+    // q_next.removeAttribute("disabled");
+  });
+  q_next.addEventListener("click", () => {
+    q_next.setAttribute("disabled", "");
+  });
+  q_prev.addEventListener("click", () => {
+    if (q_count !== 0) {
+      q_next.removeAttribute("disabled", "");
+    }
+  });
 });
